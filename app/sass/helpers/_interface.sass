@@ -1,0 +1,49 @@
+*
+  box-sizing: border-box
+  outline: none !important
+
+.container
+  width: 100%
+  max-width: 1270px
+  margin: 0 auto  
+
+h1 
+  +sg 
+  font-size: 72px
+  line-height: 1.2
+  text-transform: uppercase
+  color: $grey
+  background: $blue
+  margin: 0 0 48px
+  display: inline-block
+  padding-right: 5px  
+
+
+@media screen and ( max-width: 1359px )
+  .container
+    max-width: 1150px
+@media screen and ( max-width: 1199px )
+  .container
+    max-width: 704px
+  h1
+    font-size: 48px
+    padding-right: 4px
+    margin-bottom: 49px
+  h1.page2-h1
+      font-size: 36px
+@media screen and ( max-width: 767px )
+  .container
+    max-width: none
+    padding: 0 24px
+  .page2-section
+    .container
+      padding: 0 20px  
+@media screen and ( max-width: 575px )
+  h1
+    font-size: 30px
+    line-height: 1.2
+    margin-bottom: 33px 
+  h1.page2-h1
+    font-size: 30px
+    line-height: 1.2
+    margin-bottom: 49px     

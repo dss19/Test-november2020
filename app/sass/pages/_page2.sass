@@ -1,0 +1,234 @@
+.page2
+  &-section
+    padding: 96px 0 88px
+  &-content
+    display: grid
+    grid-template-columns: auto 619px
+    grid-template-rows: auto auto
+    grid-column-gap: 32px
+    grid-template-areas: "ds pr" "fr pr"
+    &-desc
+      grid-area: ds
+      &__item
+        display: flex
+        align-items: center
+        margin-bottom: 27px
+        &:nth-of-type(2)          
+          margin-bottom: 50px
+        &:last-of-type
+          margin-bottom: 60px  
+        &-start
+          +sg 
+          font-size: 20px
+          line-height: 1.4
+          color: $black 
+          margin-right: 14px
+          text-transform: uppercase
+        &-date
+          +hel400
+          font-size: 16px
+          line-height: 1.7
+          color: $dark
+        &-text
+          +hel400 
+          font-size: 24px
+          line-height: 1.7
+          color: $dark 
+          letter-spacing: 0.2px
+          &:nth-of-type(2)
+            display: none                 
+    &-price
+      grid-area: pr
+      background: $grey
+      padding: 48px
+      &__name
+        +hel400
+        font-size: 16px
+        line-height: 1.7
+        color: $dark
+        margin-bottom: 31px
+      &__block
+        display: flex
+        &-info
+          +hel400
+          margin-right: 20px
+          &-price 
+            font-size: 52px
+            color: $black
+            margin-bottom: 9px
+            &:nth-of-type(2)
+              display: none
+          &-time
+            font-size: 24px
+            line-height: 1.7
+            margin-bottom: 48px
+          &-desc
+            font-size: 14px
+            line-height: 1.4
+            color: $dark
+            margin-bottom: 4px
+          &-old
+            font-size: 24px
+            line-height: 1.7 
+            color: $dark 
+            text-decoration: line-through
+        &-disc
+          background: $yellow
+          padding: 10px 20px
+          height: min-content
+          &-value
+            +sg 
+            font-size: 20px
+            line-height: 1.4
+            text-transform: uppercase
+            margin-bottom: 8px
+            color: $black
+          &-text 
+            +hel400 
+            font-size: 14px
+            line-height: 1.4
+            color: $dark  
+    &-form
+      grid-area: fr
+      .input-group
+        position: relative
+        width: 100%
+        margin-bottom: 12px
+        &:last-of-type
+          margin-bottom: 30px
+        input.input
+          padding: 0
+          width: 100%
+          height: 52px
+          border: none
+          border-bottom: 1px solid rgba($black, 0.2)
+          +hel400
+          color: $dark 
+          font-size: 16px
+          line-height: 1.7
+      button.button  
+        background: transparent
+        border: none
+        color: $black
+        +sg 
+        font-size: 30px
+        line-height: 1.1
+        text-transform: uppercase
+        text-decoration: underline
+        padding: 0
+        cursor: pointer
+
+@media screen and ( max-width: 1199px )
+  .page2
+    &-section
+      padding: 76px 0
+    &-content
+      grid-template-columns: auto 343px
+      grid-column-gap: 18px
+      grid-template-areas: "ds pr" ". fr"
+      &-desc
+        &__item
+          margin-bottom: 15px
+          &:nth-of-type(2)
+            margin-bottom: 32px
+          &-start
+            font-size: 18px
+            margin-right: 10px
+          &-date
+            font-size: 14px
+          &-text    
+            font-size: 16px
+            &:nth-of-type(1)
+              display: none
+            &:nth-of-type(2)
+              display: block
+      &-price
+        padding: 32px 16px 
+        margin-bottom: 21px       
+        &__name
+          font-size: 14px
+          margin-bottom: 22px
+        &__block
+          &-info
+            &-price
+              font-size: 32px
+              line-height: 1
+              margin-bottom: 11px
+              &:nth-of-type(1)
+                display: none
+              &:nth-of-type(2)
+                display: block 
+            &-time
+              font-size: 16px 
+              margin-bottom: 24px
+            &-desc
+              font-size: 10px
+            &-old
+              font-size: 16px        
+          &-disc
+            &-value
+              font-size: 16px
+              margin-bottom: 6px
+            &-text
+              font-size: 10px    
+      &-form
+        .input-group
+          margin-bottom: 14px
+          &:last-of-type
+            margin-bottom: 29px
+          input.input
+            font-size: 14px
+            height: 42px
+        button.button
+          font-size: 20px
+          line-height: 1.1
+
+@media screen and ( max-width: 767px )
+  .page2
+    &-content
+      grid-template-columns: repeat(1, 1fr)
+      grid-template-areas: "ds" "pr" "fr"
+      &-desc
+        &__item
+          margin-bottom: 15px
+          &:last-of-type
+            margin-bottom: 32px
+          &-start
+            font-size: 14px
+            margin-right: 9px
+          &-date
+            font-size: 12px
+          &-text
+            letter-spacing: 0.1px 
+      &-price
+        padding: 24px 16px 20px
+        &__name
+          font-size: 12px
+          margin-bottom: 24px  
+        &__block
+          &-info
+            margin-right: 2px
+            &-price
+              letter-spacing: -1px
+              margin-bottom: 12px
+            &-time
+            &-desc
+              font-size: 8px
+              line-height: 1.4
+              margin-bottom: 6px
+            &-old
+              font-size: 24px
+              text-decoration: none  
+          &-disc
+            &-value
+              margin-bottom: 3px
+            &-text
+              font-size: 8px
+      &-form
+        .input-group
+          margin-bottom: 14px
+          &:last-of-type
+            margin-bottom: 33px
+          input.input 
+            font-size: 12px
+            height: 38px
